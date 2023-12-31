@@ -1,0 +1,54 @@
+@keyframes full_rotation {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(359deg); }
+}
+
+@keyframes full_rotation_2 {
+    0% { transform: rotate(90deg); }
+    75% { transform: rotate(359deg); }
+    76% { transform: rotate(0deg); }
+    100% { transform: rotate(89deg); }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0.5;
+        transform: scale(.1);
+    }
+    35% {
+        opacity: 1;
+        transform: scale(1.03);
+    }
+    68% { transform: scale(.985); }
+    85% { transform: scale(1.001); }
+    100% { transform: scale(1); }
+}
+
+.bounceIn { animation-name: bounceIn; }
+
+#basement {
+    /* transition: 1s; */
+    border-top: 1px solid #ccc;
+    background: repeating-linear-gradient(
+      -50deg,
+      #ccc 0px,
+      #ccc 2px,
+      #fdfdfd 2px,
+      #fdfdfd 14px
+    );
+}
+table.latex_symbols_table {
+    border-collapse: collapse;
+    font-size: 0.7em;
+    margin: auto;
+    margin-top: 30px;
+}
+table.latex_symbols_table tr td {
+    border: 1px solid black;
+    text-align: center;
+    padding: 0px 10px;
+}
+table.latex_symbols_table tr:last-child td:not(:first-child) {
+    font-family: Menlo;
+    font-size: 0.8em;
+}
